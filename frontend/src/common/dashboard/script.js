@@ -1,21 +1,40 @@
+const myForm = document.getElementById("myForm");
+const inpFile = document.getElementById("inpFile")
+myForm.addEventListener("submit", e => {
+	e.preventDefault();
+
+	const endpont = 'http://127.0.0.1:8000/api/signal/test'
+	const formData = new FormData();
+
+	console.log(inpFile.files)
+
+	formData.append("inpFile", inpFile.files[0]);
+
+	fetch(endpont, {
+		method: "post",
+		body: formData
+	}).catch(console.error);
+})
+
+
 const cat_btn = document.getElementById('cat_btn');
-const dog_btn = document.getElementById('dog_btn');
+// const dog_btn = document.getElementById('dog_btn');
 const cat_result = document.getElementById('cat_result');
-const dog_result = document.getElementById('dog_result');
+// const dog_result = document.getElementById('dog_result');
 
 cat_btn.addEventListener('click', getRandomCat);
-dog_btn.addEventListener('click', getRandomDog);
+// dog_btn.addEventListener('click', getRandomDog);
 
 function getRandomCat() {
 	// const a = (document.getElementById('a').value == "" ? 0 : document.getElementById('a').value)
-	const a = 20;
-	const b = (document.getElementById('b').value == "" ? 0 : document.getElementById('b').value)
-	const c = (document.getElementById('c').value == "" ? 0 : document.getElementById('c').value)
-	const d = (document.getElementById('d').value == "" ? 0 : document.getElementById('d').value)
-	const f = (document.getElementById('f').value == "" ? 0 : document.getElementById('f').value)
+	// const a = 20;
+	// const b = (document.getElementById('b').value == "" ? 0 : document.getElementById('b').value)
+	// const c = (document.getElementById('c').value == "" ? 0 : document.getElementById('c').value)
+	// const d = (document.getElementById('d').value == "" ? 0 : document.getElementById('d').value)
+	// const f = (document.getElementById('f').value == "" ? 0 : document.getElementById('f').value)
 	// const h = (document.getElementById('h').value == "" ? 0 : document.getElementById('h').value)
 	
-    const imageUrl = `http://127.0.0.1:8000/api/signal/one?a=${a}&b=${b}&c=${c}&d=${d}&f=${f}`
+    const imageUrl = `http://127.0.0.1:8000/api/signal/test`
 	fetch(imageUrl)
 		.then(res => res.blob())
 		.then(imageBlob => {
