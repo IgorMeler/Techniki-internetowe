@@ -36,9 +36,9 @@ document.write(`
  <li>
    <a href="./Tutorial/Tutorial.html">
      <i class='bx bx-chat' ></i>
-     <span class="links_name">Messages</span>
+     <span class="links_name">Tutorial</span>
    </a>
-   <span class="tooltip">Messages</span>
+   <span class="tooltip">Tutorial</span>
  </li>
  <li class="profile">
      <div class="profile-details">
