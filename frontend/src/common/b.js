@@ -14,7 +14,7 @@ document.write(`
   </li>
   <li>
   <a href="./index.html">
-    <i class='bx bx-folder' ></i>
+  <i class='bx bxs-home-circle' ></i>
     <span class="links_name">Home</span>
   </a>
     <span class="tooltip">Home</span>
@@ -35,7 +35,7 @@ document.write(`
  </li>
  <li>
    <a href="./Tutorial/Tutorial.html">
-     <i class='bx bx-chat' ></i>
+   <i class='bx bxs-book-open'></i>
      <span class="links_name">Tutorial</span>
    </a>
    <span class="tooltip">Tutorial</span>
