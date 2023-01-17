@@ -45,16 +45,3 @@ var slider = (document.getElementById("a").oninput = function () {
 
   document.getElementById("demo").innerHTML = this.value;
 });
-
-// function getRandomDog() {
-// 	fetch('https://random.dog/woof.json')
-// 		.then(res => res.json())
-// 		.then(data => {
-// 			if(data.url.includes('.mp4')) {
-// 				getRandomDog();
-// 			}
-// 			else {
-// 				dog_result.innerHTML = `<img src=${data.url} alt="dog" />`;
-// 			}
-// 		});
-// }

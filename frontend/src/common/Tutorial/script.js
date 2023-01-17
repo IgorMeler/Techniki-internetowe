@@ -6,6 +6,8 @@ const dog_result = document.getElementById("dog_result");
 cat_btn.addEventListener("click", getRandomCat);
 dog_btn.addEventListener("click", getRandomDog);
 
+var output = document.getElementById("demo");
+
 function getRandomCat() {
   // const a = (document.getElementById('a').value == "" ? 0 : document.getElementById('a').value)
   const a = 20;
@@ -38,23 +40,9 @@ function getRandomCat() {
   console.log(imageUrl);
 }
 
-var output = document.getElementById("demo");
 
 var slider = (document.getElementById("a").oninput = function () {
   var value = ((this.value - this.min) / (this.max - this.min)) * 100;
 
   document.getElementById("demo").innerHTML = this.value;
 });
-
-// function getRandomDog() {
-// 	fetch('https://random.dog/woof.json')
-// 		.then(res => res.json())
-// 		.then(data => {
-// 			if(data.url.includes('.mp4')) {
-// 				getRandomDog();
-// 			}
-// 			else {
-// 				dog_result.innerHTML = `<img src=${data.url} alt="dog" />`;
-// 			}
-// 		});
-// }
