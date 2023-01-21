@@ -9,6 +9,7 @@ cat_btn.addEventListener('click', getRandomCat);
 
 function waitToPredict() {
 	cat_result.innerHTML = "READY TO PREDICT"
+	cat_btn.disabled = false;
   }
 
 myForm.addEventListener("submit", e => {
@@ -18,8 +19,9 @@ myForm.addEventListener("submit", e => {
 	const formData = new FormData();
 
 	console.log(inpFile.files)
-
+	
 	formData.append("inpFile", inpFile.files[0]);
+	cat_btn.disabled = true;
 	cat_result.innerHTML = `<div class="loader"></div>`
 	fetch(endpont, {
 		method: "post",
