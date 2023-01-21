@@ -255,18 +255,20 @@
 }
 
 body {
-  background-image: linear-gradient(
+  /*background-image: linear-gradient(
     180deg,
     rgba(247, 247, 247, 1) 23.8%,
     rgba(252, 221, 221, 1) 92%
-  );
+  );*/
+  background-color: #fcdddd;
   font-family: "Open Sans", sans-serif;
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
   justify-content: center;
   flex-direction: column;
   height: 100vh;
   margin: 0;
+  width: fit-content;
 }
 /*######################################################################################################*/
 
@@ -276,7 +278,7 @@ body {
   z-index: 1;
   width: 100%;
   background-color: #f1f1f1;
-  margin-left: -450px;
+  margin-left: -100px;
 }
 
 .header h2 {
@@ -291,12 +293,93 @@ body {
 
 .progress-bar {
   height: 8px;
-  background: #04aa6d;
+  background: #11101d;
   width: 0%;
 }
 
 .content {
-  padding: 100px 0;
-  margin: 50px auto 0 auto;
-  width: 80%;
+  /*padding: px 0;*/
+  /*margin: -50px auto 0 auto;*/
+  /*margin-left: -160px;*/
+  width: 100%;
+}
+
+/*######################################################################################################*/
+
+.flip-card {
+  margin-left: 500px;
+  margin-top: 65px;
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #11101d;
+  color: white;
+}
+
+.flip-card-back {
+  background-color: #11101d;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.tut {
+  margin-top: 65px;
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 5px;
+  text-align: center;
+}
+.intr {
+  margin-top: 65px;
+  padding: 10px;
+  border: 2px solid;
+  border-radius: 5px;
+  text-align: left;
+  font-size: small;
+}
+
+audio {
+  margin-top: 20px;
+}
+
+.s_p {
+  margin-top: 65px;
+}
+
+.WH {
+  margin-top: 20px;
+  border: 2px solid;
+  border-radius: 5px;
+  height: 96px;
+}
+
+.lin {
+  float: left;
 }
