@@ -3,7 +3,14 @@ const inpFile = document.getElementById("inpFile");
 const cat_btn = document.getElementById('cat_btn');
 const cat_result = document.getElementById('cat_result');
 const dog_result = document.getElementById('dog_result');
+const out_img = document.getElementById('out_img');
+
 cat_btn.addEventListener('click', getRandomCat);
+
+function waitToPredict() {
+	cat_result.innerHTML = "READY TO PREDICT"
+	cat_btn.disabled = false;
+  }
 
 myForm.addEventListener("submit", e => {
 	e.preventDefault();
@@ -12,13 +19,16 @@ myForm.addEventListener("submit", e => {
 	const formData = new FormData();
 
 	console.log(inpFile.files)
-
+	
 	formData.append("inpFile", inpFile.files[0]);
-
+	cat_btn.disabled = true;
+	cat_result.innerHTML = `<div class="loader"></div>`
 	fetch(endpont, {
 		method: "post",
 		body: formData
 	}).catch(console.error);
+	setTimeout(waitToPredict, 15000);
+	
 })
 
 
