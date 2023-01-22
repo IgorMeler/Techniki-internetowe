@@ -283,6 +283,7 @@ body {
 #MainImage {
   /* Round Image */
   border-radius: 50%;
+  height: 200px;
 }
 
 /* Slideshow container */
@@ -343,4 +344,43 @@ img {
   border: 2px solid;
   border-radius: 5px;
   padding: 10px;
+}
+
+/*********skuills*********/
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html {
+  width: 90%;
+  background-color: #04aa6d;
+}
+.css {
+  width: 80%;
+  background-color: #2196f3;
+}
+.js {
+  width: 65%;
+  background-color: #f44336;
+}
+.php {
+  width: 60%;
+  background-color: #808080;
+}
+
+.myskills {
+  margin-top: -315px;
+  margin-left: 150px;
 }
