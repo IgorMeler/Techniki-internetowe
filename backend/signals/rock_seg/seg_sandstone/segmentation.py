@@ -26,7 +26,6 @@ class Sandstone:
     test_img = None
 
     def __init__(self, path):
-        print(os.getcwd())
         self.load_models()
         self.test_img = self.load_img(path=path)
 
@@ -39,7 +38,6 @@ class Sandstone:
 
     # load created before models
     def load_models(self):
-        print()
         self.feature_extractor_mika = load_model("rock_seg/seg_sandstone/data/models/extractor_mika.h5")
         self.feature_extractor_kwarc = load_model("rock_seg/seg_sandstone/data/models/extractor_kwarc.h5")
         self.feature_extractor_glauk = load_model("rock_seg/seg_sandstone/data/models/extractor_glauk.h5")
